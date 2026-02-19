@@ -1,0 +1,19 @@
+{
+  "name": "node.js",
+  "version": "1.0.0",
+  "description": "\"this file is created the use express\" ",
+  "repository": {
+    "type": "git",
+    "url": "git remote add origin https://github.com/Gopalbhople1208/express.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"hello\""
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
