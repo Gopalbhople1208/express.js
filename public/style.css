@@ -1,0 +1,10 @@
+h1{
+    color:lightseagreen;
+}
+a{
+    text-decoration:none;
+    background-color:darkslategray;
+    padding:10px 20px;
+    color:white;
+    border-radius:5px;
+}
