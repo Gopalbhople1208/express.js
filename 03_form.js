@@ -8,6 +8,8 @@ app.get("",(req,resp)=>{
     resp.send(home1());
 })
 
+
+
 app.get("/login",(req,resp)=>{
     resp.send(`<form action="/submit" method ="post">
         <input type="text" name="username" placeholder= "Enter username"/>
