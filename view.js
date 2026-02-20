@@ -10,7 +10,7 @@ const filePath = path.resolve("view");
 
 // Routes
 app.get("/", (req, resp) => {
-    resp.sendFile(filePath + "/home.html");
+    resp.sendFile(filePath + "/Home.html");
 });
 
 app.get("/login", (req, resp) => {
@@ -24,6 +24,7 @@ app.get("/submit", (req, resp) => {
 app.get("/about", (req, resp) => {
     resp.sendFile(filePath + "/about.html");
 });
+
 
 // 404 Page
 app.use((req, resp) => {
