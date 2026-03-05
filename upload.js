@@ -5,7 +5,7 @@ import path from 'path'
 
 const app = express();
 const storage = multer.diskStorage({
-    destination:function (file,req,cd){
+    destination:function (req,file,cd){
         cd(null,'upload')
     },
     filename:function(req,file,cd){
