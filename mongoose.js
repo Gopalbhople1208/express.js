@@ -4,7 +4,7 @@ import studentModel from './model/studentModel.js'
 
 const app = express();
 
-
+app.use(express.json());
  await mongoose.connect("mongodb://localhost:27017/studentData").then(()=>{
         console.log("_____connected_____");
     })
@@ -12,6 +12,22 @@ app.get('/',async (req,resp)=>{
 
    const studentData = await studentModel.find();
    resp.send(studentData);
+
+})
+app.post('/save',async (req,resp)=>{
+
+    
+
+    try{
+
+        const student= await studentModel.create(req.body);
+        resp.json({ message :"stored successfully",success:true,student});
+    }catch{
+        resp.status(500),json({error:err.message});
+    }
+    
+   
+  
 
 })
 
