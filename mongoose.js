@@ -31,6 +31,37 @@ app.post('/save',async (req,resp)=>{
 
 })
 
+app.put("/update/:id", async (req,resp)=>{
+
+//update the all data user id 69a7ef192cde88a5f77ac1e2 is update successfully by mongoose use
+    const id = req.params.id;
+
+    console.log(req.body,id);
+
+    const studentData = await studentModel.findByIdAndUpdate(id,{...req.body})
+
+
+    resp.send({
+        message:'data is update',
+        success:true,
+        studentInfo:studentData
+    })
+})
+
+
+app.delete("/delete/:id", async (req,resp)=>{
+    const id = req.params.id;
+//delete is work successfully
+const studentData = await studentModel.findByIdAndDelete(id)
+
+
+resp.send({
+    message:"this data is delete",
+    success:true,
+    studentInfo:studentData
+})
+})
+
 app.listen(2500,()=>{
     console.log("this server is run corrected http://localhost:2500")
 })
