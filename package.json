@@ -9,13 +9,14 @@
   "license": "ISC",
   "author": "",
   "type": "module",
-  "main": "index.js",
+  "main": " index.js",
   "scripts": {
     "test": "\"hello\""
   },
   "dependencies": {
     "ejs": "^3.0.2",
     "express": "^5.2.1",
+    "mongoose": "^9.2.4",
     "morgan": "^1.10.1"
   },
   "devDependencies": {
